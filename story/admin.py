@@ -3,5 +3,10 @@ from django.contrib import admin
 # Register your models here.
 from .models import Story,Category
 
-admin.site.register(Story)
-admin.site.register(Category)
+@admin.register(Category)
+class CategoryAdmin(admin.ModelAdmin):
+    list_display=['name','slug']
+
+@admin.register(Story)
+class StoryAdmin(admin.ModelAdmin):
+    list_display=['title','publish']

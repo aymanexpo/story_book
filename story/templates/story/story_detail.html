@@ -7,6 +7,6 @@
 {% block body %}
 <div class="container">
     <h2 class="text-center">{{story.title}}</h2><hr>
-    <p class="lead">{{story.body}}</p>
+    <p class="lead">{{story.body|safe}}</p>
 </div>
 {% endblock %}
