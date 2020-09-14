@@ -5,17 +5,25 @@
 {% endblock %}
 
 {% block body %}
-
     <div class="jumbtron">
         <h3>Categories</h3>
+        <ul>
+            <li>
+                <a href="{% url 'story:story_list' %}">All</a>
+                {% for x in categories %}
+                    <li>
+                        <a href="{{x.get_absolute_url}}">{{x.name}}</a>
+                    </li>
+                {% endfor %}
+            </li>
+        </ul>
     </div>
-    <ul>
-        <li>
-            <a href="#">All</a>
-            {% for x in categories %}
-                
-            {% endfor %}
-        </li>
-    </ul>
+    <div>
+        {% if category %}{{category.name}}{% else %}All-STORY{% endif %}
 
+        {% for x in story %}
+            <h2>{{x.name}}</h2>
+            <p>{{x.des}}</p>
+        {% endfor %}    
+    </div>
 {% endblock %}

@@ -10,8 +10,7 @@ def strory_list(request,category_slug=None):
     if category_slug:
         category=get_object_or_404(Category,slug=category_slug)
         story=Story.filter(category=category)
-    return render(request,'story/story_list.html',{
-        'categories':categories,
-        'story':story,
-        'category':category,
+    return render(request,'story/story_list.html',{'categories':categories,
+                                                   'story':story,
+                                                   'category':category,
     })
