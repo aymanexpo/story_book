@@ -10,3 +10,6 @@ class CategoryAdmin(admin.ModelAdmin):
 @admin.register(Story)
 class StoryAdmin(admin.ModelAdmin):
     list_display=['title','publish']
+    search_fields=['title',]
+    class Media:
+        js=('tiny.js',)
