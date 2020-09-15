@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block title %}
-
+<title>Story book</title>
 {% endblock %}
 
 {% block body %}
@@ -23,8 +23,19 @@
             </li>
         </ul>
     </div>
-    <div>
-        <h3>{% if category %}{{category.name}}{% else %}All-STORY{% endif %}</h3><hr>
+    <div><hr>
+        
+        <form action="{% url 'story:story_search' %}" class="form-inline" method="get">
+            <div class="from-group mb-2">
+                <h3>{% if category %}{{category.name}}{% else %}All-STORY{% endif %}</h3>
+            </div>
+            <div class="from-group mx-sm-3 mb-2">
+                <label class="sr-only">Search</label>
+                <input name="search" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-success btn-lg">Search</button> 
+        </form>
+        <hr>
         {% for x in story %}
         <div class="mt-3">
                 <a href="{{x.get_absolute_url}}"><h2>{{x.title}}</h2></a>
