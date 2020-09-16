@@ -41,7 +41,9 @@ def story_list(request,category_slug=None):
     })
 def story_detail(request,id):
     story=get_object_or_404(Story,id=id)
-    return render(request,'story/story_detail.html',{'story':story})
+    all_story=list(Story.objects.exclude(id=id))
+    like_story=random.sample(all_story,3)
+    return render(request,'story/story_detail.html',{'story':story,'like_story':like_story})
 
 def search_story(request):
     query=None

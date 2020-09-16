@@ -8,5 +8,12 @@
 <div class="container">
     <h2 class="text-center">{{story.title}}</h2><hr>
     <p class="lead">{{story.body|safe}}</p>
+</div><hr>
+<div class="container">
+    <h2>YOU MAY ALSO LIKE :</h2>
+    {% for x in like_story %}
+        <a href="{{x.get_absolute_url}}"><h5>{{x.title}}</h5></a>
+    {% endfor %}
 </div>
+
 {% endblock %}
