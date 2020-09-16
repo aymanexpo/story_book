@@ -43,6 +43,10 @@
         </div>
             {% endfor %}<hr>
             <h3 class="text-center">{% include 'pagination.html' with page=story %}</h3>
+            <hr>
+            <h4>Recent story :</h4>
+            <a href="{{recent_story.get_absolute_url}}"><h2>{{recent_story.title}}</h2></a>
+            
     </div>
 </div>
 {% endblock %}

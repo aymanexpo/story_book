@@ -1,6 +1,7 @@
 from django.shortcuts import render,get_object_or_404
 from django.core.paginator import Paginator,EmptyPage,PageNotAnInteger
 from django.db.models import Q
+import random
 
 # Create your views here.
 from .models import Category,Story
@@ -29,13 +30,14 @@ def story_list(request,category_slug=None):
             story=paginator.page(1)
         except EmptyPage:
             story=paginator.page(paginator.num_pages)
-    all_story=Story.objects.all()
-    recent_story=all_story[:3]
+    all_story=list(Story.objects.all())
+    recent_story=random.sample(all_story,3)[0]
 
     return render(request,'story/story_list.html',{'categories':categories,
                                                    'story':story,
                                                    'category':category,
                                                    'page':page,
+                                                   'recent_story':recent_story,
     })
 def story_detail(request,id):
     story=get_object_or_404(Story,id=id)
