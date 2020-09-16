@@ -29,6 +29,8 @@ def story_list(request,category_slug=None):
             story=paginator.page(1)
         except EmptyPage:
             story=paginator.page(paginator.num_pages)
+    all_story=Story.objects.all()
+    recent_story=all_story[:3]
 
     return render(request,'story/story_list.html',{'categories':categories,
                                                    'story':story,

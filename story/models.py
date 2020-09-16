@@ -20,7 +20,7 @@ class Story(models.Model):
     des=models.TextField()
     publish=models.DateTimeField(auto_now_add=True)
     class Meta:
-        ordering=('publish',)
+        ordering=('-publish',)
 
     def __str__(self):
         return self.title
