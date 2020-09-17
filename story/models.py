@@ -1,5 +1,6 @@
 from django.db import models
 from django.urls import reverse
+from taggit.managers import TaggableManager
 
 # Create your models here.
 class Category(models.Model):
@@ -19,6 +20,7 @@ class Story(models.Model):
     body=models.TextField()
     des=models.TextField()
     publish=models.DateTimeField(auto_now_add=True)
+    tags=TaggableManager()
     class Meta:
         ordering=('-publish',)
 
