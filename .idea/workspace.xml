@@ -13,6 +13,10 @@
   <component name="JupyterTrust" id="12e4a240-eea9-42d9-bba8-b727fd052060" />
   <component name="ProjectId" id="1ivg2oX3kgYS87KjwsPT3e31M1s" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -50,7 +54,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1602793274496</updated>
-      <workItem from="1602793308947" duration="306000" />
+      <workItem from="1602793308947" duration="518000" />
+      <workItem from="1602876158191" duration="1759000" />
     </task>
     <servers />
   </component>
