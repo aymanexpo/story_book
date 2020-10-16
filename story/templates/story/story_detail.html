@@ -7,8 +7,7 @@
 {% block body %}
     <div class="container">
         <h2 class="text-center">{{story.title}}</h2><hr>
-        <p class="lead">{{story.body|safe}}</p>
-    </div><hr>
+        <p class="lead">{{story.body|safe}}</p><hr>
 
     <h2>YOU MAY ALSO LIKE :</h2>
     {% for x in like_story %}
@@ -24,5 +23,6 @@
     {% empty %}
         There are no similar stories yet :p
     {% endfor %}
+    </div><hr>
 
 {% endblock %}
