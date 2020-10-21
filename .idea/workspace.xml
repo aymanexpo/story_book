@@ -20,6 +20,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../customerAy" />
   </component>
   <component name="RunManager">
     <configuration name="story_book" type="Python.DjangoServer" factoryName="Django server">
@@ -56,10 +57,17 @@
       <updated>1602793274496</updated>
       <workItem from="1602793308947" duration="518000" />
       <workItem from="1602876158191" duration="3719000" />
+      <workItem from="1603222217333" duration="121000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="740" y="294" key="FileChooserDialogImpl" timestamp="1603222334269">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="740" y="294" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1603222334269" />
   </component>
 </project>
